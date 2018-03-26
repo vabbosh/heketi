@@ -1,0 +1,9 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: glusterfs-distributed
+provisioner: kubernetes.io/glusterfs
+parameters:
+  resturl: "http://10.32.72.180:8080" 
+  restauthenabled: "false"
+  volumetype: none
